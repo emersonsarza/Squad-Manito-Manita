@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/squad-manito-manita/static/css/main.55fab818.css",
+    "main.js": "/squad-manito-manita/static/js/main.2b344423.js",
+    "static/js/787.e9b13360.chunk.js": "/squad-manito-manita/static/js/787.e9b13360.chunk.js",
+    "index.html": "/squad-manito-manita/index.html",
+    "main.55fab818.css.map": "/squad-manito-manita/static/css/main.55fab818.css.map",
+    "main.2b344423.js.map": "/squad-manito-manita/static/js/main.2b344423.js.map",
+    "787.e9b13360.chunk.js.map": "/squad-manito-manita/static/js/787.e9b13360.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.55fab818.css",
+    "static/js/main.2b344423.js"
+  ]
+}
