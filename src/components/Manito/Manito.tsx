@@ -20,7 +20,7 @@ const Manito: FunctionComponent<ManitoProps> = ({ name, wishlists }) => {
           ))}
         </>
       ) : (
-        <WishlistItem>No wishlist dded.</WishlistItem>
+        <WishlistItem>No wishlist added yet.</WishlistItem>
       )}
     </Container>
   );
