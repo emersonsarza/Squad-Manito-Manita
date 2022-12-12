@@ -12,24 +12,14 @@ import {
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: process.env.REACT_APP_FB_API_KEY,
-//   authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
-//   projectId: process.env.REACT_APP_FB_PROJECT_DOMAIN,
-//   storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_FB_MESSAGING_ID,
-//   appId: process.env.REACT_APP_FB_APP_ID,
-//   measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
-// };
-
 const firebaseConfig = {
-  apiKey: 'AIzaSyCf5kIpglXfGyu4dGm3lUef30ZgM0smLLc',
-  authDomain: 'squad-manito-manita.firebaseapp.com',
-  projectId: 'squad-manito-manita',
-  storageBucket: 'squad-manito-manita.appspot.com',
-  messagingSenderId: '150374721393',
-  appId: '1:150374721393:web:394077898f0ed12bd638d0',
-  measurementId: 'G-75GSDHP15N',
+  apiKey: process.env.REACT_APP_FB_API_KEY,
+  authDomain: process.env.REACT_APP_FB_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FB_PROJECT_DOMAIN,
+  storageBucket: process.env.REACT_APP_FB_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FB_MESSAGING_ID,
+  appId: process.env.REACT_APP_FB_APP_ID,
+  measurementId: process.env.REACT_APP_FB_MEASUREMENT_ID,
 };
 
 // Initialize Firebase
