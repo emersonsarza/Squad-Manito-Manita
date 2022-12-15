@@ -74,7 +74,7 @@ export const UserContextProvider = ({ children }: UserContextProps) => {
 
   const assignManito = useCallback(async () => {
     if (done) {
-      const unselected = await getUnselectedParticipants();
+      const unselected = await getUnselectedParticipants(name);
       const filtered = unselected.filter((n) => n !== name);
       const random: number = Math.floor(Math.random() * filtered.length);
       setManito(filtered[random] as string);

@@ -23,13 +23,21 @@ export const getParticipantById = async (participantId: string) => {
   return participants.find(({ id }) => id === participantId);
 };
 
-export const getUnselectedParticipants = async () => {
+export const getUnselectedParticipants = async (participant: string) => {
   const users = await getUsers();
   const participants = await getParticipants();
 
   const userList = users.map(({ manito }) => manito);
   const partList = participants.map(({ name }) => name);
-  return partList.filter((name) => !userList.includes(name));
+  const doneList = users.map(({ name }) => name);
+  const unDoneList = partList.filter((name) => !doneList.includes(name)); // ['dale', 'steph']
+  const unselectedList = partList.filter((name) => !userList.includes(name));
+  if (unDoneList.length === 2) {
+    if (unselectedList.some((name) => !unDoneList.includes(name))) {
+      return unDoneList.filter((name) => name !== participant);
+    }
+  }
+  return unselectedList;
 };
 
 export const setUserInfo = async (id: string, user: any) => {
