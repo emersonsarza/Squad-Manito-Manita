@@ -1,11 +1,16 @@
 import { getCollection, setCollection } from '../firebase';
+import { decrypt, encrypt } from './security';
 
 export const getParticipants = async () => {
   return (await getCollection('participants')) as Record<string, unknown>[];
 };
 
 export const getUsers = async () => {
-  return (await getCollection('users')) as Record<string, unknown>[];
+  const users = (await getCollection('users')) as Record<string, unknown>[];
+  return users.map((user) => ({
+    ...user,
+    manito: decrypt(user.manito),
+  })) as Record<string, unknown>[];
 };
 
 export const isValidParticipant = async (participantId: string) => {
@@ -45,6 +50,7 @@ export const setUserInfo = async (id: string, user: any) => {
   const userList = users.map(({ name }) => name);
 
   if (!userList.includes(user.name)) {
+    user.manito = encrypt(user.manito);
     setCollection('users', id, user);
   }
 };
